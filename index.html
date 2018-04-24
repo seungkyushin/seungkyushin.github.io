@@ -1,37 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .flex-container {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            flex-flow: row wrap;
+            text-align: center;
+        }
 
-        
+        .flex-container>* {
+            padding: 15px;
+            -webkit-flex: 1 100%;
+            flex: 1 100%;
+        }
+
+
+        @media all and (min-width: 768px) {
+            .article {
+                -webkit-flex: 5 0px;
+                flex: 5 0px;
+                -webkit-order: 2;
+                order: 2;
+            }
+            footer {
+                -webkit-order: 3;
+                order: 3;
+            }
+        }
+    </style>
+
+
     <title>Document</title>
 </head>
+
 <body>
 
     <div class="container">
-  <ul class="list-group">
-  <li class="list-group-item"><a href="https://seungkyushin.github.io/BootStrap/BS_Jumbotron.html">Jumbotron</a></li>
-  <li class="list-group-item"><a href="https://seungkyushin.github.io/BootStrap/BS_well.html">Well</a></li>
-  <li class="list-group-item"><a href="https://seungkyushin.github.io/BootStrap/BS_Alerts.html">Alerts</a></li>
-  <li class="list-group-item"><a href="https://seungkyushin.github.io/BootStrap/BS_Buttons.html">Buttons</a></li>
-  <li class="list-group-item"><a href="https://seungkyushin.github.io/BootStrap/BS_ButtonGroups.html">Button Groups</a></li>
-  <li class="list-group-item"><a href="https://seungkyushin.github.io/BootStrap/BS_Glyphicons.html">Glyphicons</a></li>
-  <li class="list-group-item"><a href="https://seungkyushin.github.io/BootStrap/BS_Jumbotron.html">BootStrap and Labels</a></li>
-  <li class="list-group-item"><a href="https://seungkyushin.github.io/BootStrap/BS_ProgessBar.html">Progress Bars</a></li>
-  <li class="list-group-item"><a href="https://seungkyushin.github.io/BootStrap/BS_Pagination.html">Pagination</a></li>
+        <div class="jumbotron">
+            <header>
+                <h1 style="text-align:center;">header</h1>
+            </header>
+        </div>
 
-  </ul>
-</div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8" style="background-color:lavender;">
+                <session>
+                    session
+                    <article id="article">
+                        <img style="width:40%;height:40%;" src="https://getbootstrap.com/assets/img/bootstrap-stack.png" alt="bootstrap image">
+                    </article>
+                </session>
+            </div>
+            <div class="col-sm-4" style="background-color:blueviolet;">
+                <aside class="sidebar">
+                    aside
+                </aside>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <td colspan="3">머리 부분</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>제목1</th>
+                    <th>제목2</th>
+                    <th>제목3</th>
+                </tr>
+                <tr>
+                    <td>값</td>
+                    <td>값</td>
+                    <td>값</td>
+                </tr>
+                <tr>
+                    <td>값</td>
+                    <td>값</td>
+                    <td>값</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">바닥 부분</td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+    </div>
+
+
+
+    <div class="jumbotron" style="position: relative;width:100%;height:100%;bottom:0;">
+        <footer id="footer" <address style="font-size:2rem">주소 : 서울특별시 동작구 여의대방로 111-2</address>
+        </footer>
+    </div>
+
+    </div>
+
+
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-home"></span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">BootStrap
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_Jumbotron.html">Jumbotron</a>
+                            </li>
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_well.html">Well</a>
+                            </li>
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_Alerts.html">Alerts</a>
+                            </li>
+
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_Buttons.html">Buttons</a>
+                            </li>
+
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_ButtonGroups.html">Button Groups</a>
+                            </li>
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_Glyphicons.html">Glyphicons</a>
+                            </li>
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_Panel.html">Panel</a>
+                            </li>
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_ProgessBar.html">Progress Bars</a>
+                            </li>
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_Pagination.html">Pagination</a>
+                            </li>
+
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_Pager.html">Pager</a>
+                            </li>
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_ListGroup.html">List Group</a>
+                            </li>
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_NavigationBar.html">NavigationBar</a>
+                            </li>
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_Dropdowns.html">Dropdowns</a>
+                            </li>
+                            <li>
+                                <a href="https://seungkyushin.github.io/BootStrap/BS_From.html">From</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <form class="navbar-form navbar-right" action="/action_page.php">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
 
 </body>
-</html>
 
+</html>
